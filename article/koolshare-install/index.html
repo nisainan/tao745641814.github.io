@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          嘿丶小妞 | Blog
+          软路由Koolshare安装教程 - 嘿丶小妞 | Blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/article/test/">
+    <link rel="canonical" href="http://yoursite.com/article/koolshare-install/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -89,11 +89,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1></h1>
+                        <h1>软路由Koolshare安装教程</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 嘿丶小妞 on
-                            2019-07-11
+                            2019-07-15
                         </span>
                     </div>
                 
@@ -210,20 +210,32 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="一-准备工作">一、准备工作</h3>
+<p>1、准备一个2GB容量以上的U盘，并刷上PE（U深度）</p>
+<p>2、到 <a href="http://firmware.koolshare.cn/LEDE_X64_fw867/" target="_blank" rel="noopener">这里</a> 下载路由器固件，建议选择 uefi 版本</p>
+<p>3、到 <a href="https://m0n0.ch/wall/physdiskwrite.php" target="_blank" rel="noopener">这里</a> 下载 physdiskwrite (38kb)</p>
+<h3 id="二-固件刷入">二、固件刷入</h3>
+<p>1、将路由器固件解压，uefi 版本的话，大概有700多M，放入U盘的ISO目录，将下载的physdiskwrite软件也放到该目录</p>
+<p>2、插入路由器USB端口，以U盘方式启动</p>
+<p>3、使用分区助手删除路由器硬盘分区，并格式化</p>
+<p>4、打开CMD终端，进入U盘的ISO目录，执行命令 physdiskwrite -u 镜像名，然后选择安装到哪个盘，选择非Windows系统盘的那个盘（一般来说是信息量多的那个，我这里是选择0号盘）。</p>
+<p>5、写入成功之后拔掉U盘，重新启动路由器</p>
+<h3 id="三-wan-lan设置">三、wan lan设置</h3>
+<p>1、网线连接路由器和电脑，访问192.168.1.1，出现登录页面，默认密码为 koolshare</p>
+<p>2、按如下图，将1，2，3，4，5网卡设置为lan口</p>
+<p><img src="/img/koolshare/1563181031569.jpg" alt="image-20190715165818101"></p>
+<p>3、按如下图，将6网卡设置为wan口，并设置协议为PPPOE，填入宽带账号和密码，点击保存应用，就可以上网了</p>
+<p><img src="/img/koolshare/1563181265247.jpg" alt="image-20190715165818102"></p>
+
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/article/koolshare-install/" data-toggle="tooltip" data-placement="top" title="软路由Koolshare安装教程">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/article/hexo-theme-huweihuang/" data-toggle="tooltip" data-placement="top" title="[Hexo] Theme HuWeihuang">Next Post &rarr;</a>
+                            <a href="/article/test/" data-toggle="tooltip" data-placement="top" title="">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
